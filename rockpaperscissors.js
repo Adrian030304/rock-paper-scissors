@@ -1,5 +1,7 @@
-
+const getComputerChoice = () => {
 let compChoice = ["rock","paper","scissors"];
-let nmb = Math.floor(Math.random() * 3)
+let nb = Math.floor(Math.random() * 3)
+return compChoice[nb]
+}
 
-console.log(compChoice[nmb])
+console.log(getComputerChoice())
