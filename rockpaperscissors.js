@@ -25,6 +25,9 @@ console.log(playRound("Rock", computerSelection));
 
 const game = () => {
   for (let i = 0; i < 5; i++) {
-    return playRound("Rock", computerSelection);
+    console.log(playRound("Rock", computerSelection));
+    
   }
 };
+
+console.log(game())
