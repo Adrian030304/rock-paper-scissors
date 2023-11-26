@@ -1,5 +1,5 @@
-
 playerSelection = prompt("Pick one: ");
+let playBtn = document.querySelector("play-button");
 
 
 
@@ -10,7 +10,7 @@ const getComputerChoice = () => {
 };
 
 const playRound = (playerSelection, computerSelection) => {
-  if (playerSelection === ""){
+  if (playerSelection === "") {
     return "Input a valid answer";
   }
   playerSelection = playerSelection.toLowerCase();
@@ -32,8 +32,9 @@ const computerSelection = getComputerChoice();
 const game = () => {
   for (let i = 0; i < 5; i++) {
     console.log(playRound(playerSelection, computerSelection));
-    
   }
 };
 
-console.log(game())
+console.log(game());
+
+playBtn.addEventListener('click',playRound());
