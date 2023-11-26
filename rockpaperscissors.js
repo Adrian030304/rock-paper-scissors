@@ -1,19 +1,16 @@
-playerSelection = prompt("Pick one: ");
-let playBtn = document.querySelector("play-button");
-
-
-
+window.onload=function(){
+  let playBtn = document.querySelector("play-button");
+  let playerSelection = prompt("Pick one: ");
 const getComputerChoice = () => {
   let compChoice = ["rock", "paper", "scissors"];
   let nb = Math.floor(Math.random() * 3);
   return compChoice[nb];
 };
-
 const playRound = (playerSelection, computerSelection) => {
+  playerSelection = playerSelection.toLowerCase();
   if (playerSelection === "") {
     return "Input a valid answer";
   }
-  playerSelection = playerSelection.toLowerCase();
   if (
     (playerSelection === "rock" && computerSelection === "scissors") ||
     (playerSelection === "paper" && computerSelection === "rock") ||
@@ -38,4 +35,6 @@ const game = () => {
 
 console.log(game());
 
-playBtn.addEventListener('click',playRound());
+playBtn.addEventListener("click", playRound());
+
+}
