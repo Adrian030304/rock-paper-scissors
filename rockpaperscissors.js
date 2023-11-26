@@ -1,3 +1,8 @@
+
+playerSelection = prompt("Pick one: ");
+
+
+
 const getComputerChoice = () => {
   let compChoice = ["rock", "paper", "scissors"];
   let nb = Math.floor(Math.random() * 3);
@@ -5,6 +10,9 @@ const getComputerChoice = () => {
 };
 
 const playRound = (playerSelection, computerSelection) => {
+  if (playerSelection === ""){
+    return "Input a valid answer";
+  }
   playerSelection = playerSelection.toLowerCase();
   if (
     (playerSelection === "rock" && computerSelection === "scissors") ||
@@ -21,11 +29,9 @@ const playRound = (playerSelection, computerSelection) => {
 };
 
 const computerSelection = getComputerChoice();
-console.log(playRound("Rock", computerSelection));
-
 const game = () => {
   for (let i = 0; i < 5; i++) {
-    console.log(playRound("Rock", computerSelection));
+    console.log(playRound(playerSelection, computerSelection));
     
   }
 };
