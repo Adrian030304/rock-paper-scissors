@@ -22,3 +22,11 @@ const playRound = (playerSelection,computerSelection) => {
 
 const computerSelection = getComputerChoice();
 console.log(playRound("Rock",computerSelection))
+
+const game = () => {
+    while (let i = 0 < 5){
+        i++
+        return playRound("Rock",computerSelection);
+        
+    }
+}
