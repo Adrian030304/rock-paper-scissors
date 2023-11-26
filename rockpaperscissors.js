@@ -33,6 +33,7 @@ const game = () => {
   for (let i = 0; i < 5; i++) {
     console.log(playRound(playerSelection, computerSelection));
   }
+  return 0;
 };
 
 console.log(game());
