@@ -37,6 +37,8 @@ const game = () => {
 
 console.log(game());
 
-playBtn.addEventListener("click", playRound());
+playBtn.addEventListener("click", function(){
+  game();
+});
 
 }
