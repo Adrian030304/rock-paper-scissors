@@ -1,6 +1,8 @@
 window.onload=function(){
+  //Variable declaration
   let playBtn = document.querySelector("play-button");
   let playerSelection = prompt("Pick one: ");
+  //Functon declaration
 const getComputerChoice = () => {
   let compChoice = ["rock", "paper", "scissors"];
   let nb = Math.floor(Math.random() * 3);
@@ -24,7 +26,7 @@ const playRound = (playerSelection, computerSelection) => {
     return `You lose ! ${computerSelection} beats ${playerSelection}`;
   }
 };
-
+//declare game function to run a number of times
 const computerSelection = getComputerChoice();
 const game = () => {
   for (let i = 0; i < 5; i++) {
