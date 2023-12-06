@@ -1,6 +1,9 @@
-window.onload=function(){
+
   //Variable declaration
-  let playBtn = document.querySelector(".play-button");
+ let rock = document.querySelector(".rock")
+ let paper = document.querySelector(".paper")
+ let scissors = document.querySelector(".scissors")
+
   //Functon declaration
 const getComputerChoice = () => {
   let compChoice = ["rock", "paper", "scissors"];
@@ -10,7 +13,7 @@ const getComputerChoice = () => {
 
 const playRound = (playerSelection, computerSelection) => {
   
-  playerSelection.toLowerCase();
+  playerSelection = playerSelection.toLowerCase();
   if (playerSelection === "") {
     return "Input a valid answer";
   }
@@ -28,19 +31,12 @@ const playRound = (playerSelection, computerSelection) => {
   }
 };
 //declare game function to run a number of times
-let playerSelection = prompt("Pick one: ");
-const computerSelection = getComputerChoice();
-const game = () => {
-  for (let i = 0; i < 5; i++) {
-    console.log(playRound(playerSelection, computerSelection));
-  }
-  return 0;
-};
 
-console.log(game());
+const computerSelection = getComputerChoice();
 
 playBtn.addEventListener("click", function(){
-  game();
+  let playerSelection = prompt("Enter your choice: ");
+  playRound(playerSelection, computerSelection) 
 });
 
-}
+
