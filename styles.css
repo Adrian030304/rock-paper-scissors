@@ -9,23 +9,42 @@ body{
     align-items: center;
     justify-content: center;
     height: 100vh;
-    flex-direction: column;
+    flex-direction: row;
     text-align: center;
+    gap: 20px;
     
 }
 .container{
     height: 300px;
-    width: 400px;
+    width: 280px;
 
 }
-.main-content {
+
+.rock,
+.paper,
+.scissors {
     width: 100%;
     height:fit-content;
-    background-color: #fff;
+    background-color: #d8e06d;
     border-radius: 15px;
     padding: 50px 40px;
-    box-shadow: 0 0 10px;
+    box-shadow: 0 0 1px;
+    
 }
+
+.rock:hover,
+.paper:hover,
+.scissors:hover{
+    box-shadow: 0 0 10px;
+    cursor:pointer;
+}
+
+.rock:active,
+.paper:active,
+.scissors:active{
+    padding: 80px 60px;
+}
+
 h1{
     padding: 20px;
 }
