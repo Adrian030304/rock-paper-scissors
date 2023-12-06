@@ -13,6 +13,7 @@ body{
     text-align: center;
     gap: 20px;
     
+    
 }
 .container{
     height: 300px;
@@ -20,8 +21,20 @@ body{
 
 }
 
-.result
-
+.result{
+    position: fixed;
+    top: 50px;
+    padding: 1.5%;
+    border-radius: 15px;
+    height:fit-content;
+    background-color: #d8e06d;
+    box-shadow: 0 0 1px;
+    
+}
+.score{
+    display: flex;
+    justify-content: center;
+}
 .rock,
 .paper,
 .scissors {
@@ -31,6 +44,7 @@ body{
     border-radius: 15px;
     padding: 50px 40px;
     box-shadow: 0 0 1px;
+    
     
 }
 
