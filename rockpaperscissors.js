@@ -17,25 +17,26 @@ const playRound = (playerSelection, computerSelection) => {
   if (playerSelection === "") {
     return "Input a valid answer";
   }
-  if (
+  if (playerSelection === computerSelection)
+  {
+    console.log(getComputerChoice());
+    return "That's a tie";
+  } else if (
     (playerSelection === "rock" && computerSelection === "scissors") ||
     (playerSelection === "paper" && computerSelection === "rock") ||
     (playerSelection === "scissors" && computerSelection === "paper")
-  ) {
-    console.log(getComputerChoice());
+  )  { 
       return `You win ! ${playerSelection} beats ${computerSelection}`;
-  } else if (playerSelection === computerSelection) {
-      return "That's a tie";
   } else {
       return `You lose ! ${computerSelection} beats ${playerSelection}`;
   }
 };
-//declare game function to run a number of times
+//
 
 const computerSelection = getComputerChoice();
 
 playBtn.addEventListener("click", function(){
-  let playerSelection = prompt("Enter your choice: ");
+  let playerSelection 
   playRound(playerSelection, computerSelection) 
 });
 
