@@ -12,10 +12,9 @@ const getComputerChoice = () => {
 };
 
 const playRound = (playerSelection, computerSelection) => {
-  
+  console.log(getComputerChoice());
   if (playerSelection === computerSelection)
   {
-    console.log(getComputerChoice());
     return "That's a tie";
   } else if (
     (playerSelection === "rock" && computerSelection === "scissors") ||
@@ -26,14 +25,27 @@ const playRound = (playerSelection, computerSelection) => {
   } else {
       return `You lose ! ${computerSelection} beats ${playerSelection}`;
   }
+  
 };
 //
 
-const computerSelection = getComputerChoice();
 
-playBtn.addEventListener("click", function(){
-  let playerSelection 
-  playRound(playerSelection, computerSelection) 
+rock.addEventListener("click", function(){
+  playerSelection = "rock";
+  const computerSelection = getComputerChoice();
+  console.log(playRound(playerSelection,computerSelection))
+});
+
+paper.addEventListener("click", function(){
+  playerSelection = "paper";
+  const computerSelection = getComputerChoice();
+  console.log(playRound(playerSelection,computerSelection))
+});
+
+scissors.addEventListener("click", function(){
+  playerSelection = "scissors";
+  const computerSelection = getComputerChoice();
+  console.log(playRound(playerSelection,computerSelection))
 });
 
 
