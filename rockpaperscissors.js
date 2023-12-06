@@ -13,10 +13,6 @@ const getComputerChoice = () => {
 
 const playRound = (playerSelection, computerSelection) => {
   
-  playerSelection = playerSelection.toLowerCase();
-  if (playerSelection === "") {
-    return "Input a valid answer";
-  }
   if (playerSelection === computerSelection)
   {
     console.log(getComputerChoice());
