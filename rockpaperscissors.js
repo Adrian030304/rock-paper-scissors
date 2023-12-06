@@ -1,9 +1,11 @@
 
   //Variable declaration
- let rock = document.querySelector(".rock")
- let paper = document.querySelector(".paper")
- let scissors = document.querySelector(".scissors")
-
+ let rock = document.querySelector(".rock");
+ let paper = document.querySelector(".paper");
+ let scissors = document.querySelector(".scissors");
+ let yourScore = document.querySelector(".yourScore");
+ let computerScore = document.querySelector(".computerScore");
+ 
   //Functon declaration
 const getComputerChoice = () => {
   let compChoice = ["rock", "paper", "scissors"];
