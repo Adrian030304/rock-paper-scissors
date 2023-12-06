@@ -12,7 +12,6 @@ const getComputerChoice = () => {
 };
 
 const playRound = (playerSelection, computerSelection) => {
-  console.log(getComputerChoice());
   if (playerSelection === computerSelection)
   {
     return "That's a tie";
@@ -29,23 +28,23 @@ const playRound = (playerSelection, computerSelection) => {
 };
 //
 
+//event handler
+
+const handleClick = (playerSelection) => {
+  const computerSelection = getComputerChoice();
+  console.log(playRound(playerSelection, computerSelection));
+}
 
 rock.addEventListener("click", function(){
-  playerSelection = "rock";
-  const computerSelection = getComputerChoice();
-  console.log(playRound(playerSelection,computerSelection))
+  handleClick("rock")
 });
 
 paper.addEventListener("click", function(){
-  playerSelection = "paper";
-  const computerSelection = getComputerChoice();
-  console.log(playRound(playerSelection,computerSelection))
+  handleClick("paper")
 });
 
 scissors.addEventListener("click", function(){
-  playerSelection = "scissors";
-  const computerSelection = getComputerChoice();
-  console.log(playRound(playerSelection,computerSelection))
+  handleClick("scissors")
 });
 
 
