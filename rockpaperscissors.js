@@ -5,7 +5,12 @@
  let scissors = document.querySelector(".scissors");
  let yourScore = document.querySelector(".yourScore");
  let computerScore = document.querySelector(".computerScore");
- 
+ let winner = document.querySelector(".winner")
+ yourScore.innerHTML = Number(yourScore.innerHTML = 0) 
+ computerScore.innerHTML = Number(computerScore.innerHTML = 0) 
+
+  
+  
   //Functon declaration
 const getComputerChoice = () => {
   let compChoice = ["rock", "paper", "scissors"];
@@ -14,6 +19,11 @@ const getComputerChoice = () => {
 };
 
 const playRound = (playerSelection, computerSelection) => {
+  if(Number(yourScore.innerHTML) === 5 ){
+    winner.innerHTML = `You won !`
+  } else {
+    winner.innerHTML = `You Lost ! Computer has won !`
+  }
   if (playerSelection === computerSelection)
   {
     return "That's a tie";
@@ -22,8 +32,11 @@ const playRound = (playerSelection, computerSelection) => {
     (playerSelection === "paper" && computerSelection === "rock") ||
     (playerSelection === "scissors" && computerSelection === "paper")
   )  { 
+      Number(yourScore.innerHTML) += 1
       return `You win ! ${playerSelection} beats ${computerSelection}`;
+
   } else {
+     Number(computerScore.innerHTML) += 1
       return `You lose ! ${computerSelection} beats ${playerSelection}`;
   }
   
