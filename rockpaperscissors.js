@@ -1,42 +1,65 @@
-window.onload=function(){
-  //Variable declaration
-  let playBtn = document.querySelector("play-button");
-  let playerSelection = prompt("Pick one: ");
-  //Functon declaration
+//Variable declaration
+let rock = document.querySelector(".rock");
+let paper = document.querySelector(".paper");
+let scissors = document.querySelector(".scissors");
+let yourScore = document.querySelector(".yourScore");
+let computerScore = document.querySelector(".computerScore");
+let winner = document.querySelector(".winner")
+yourScore.innerHTML = 0
+computerScore.innerHTML = 0
+ 
+ 
+ //Functon declaration
 const getComputerChoice = () => {
-  let compChoice = ["rock", "paper", "scissors"];
-  let nb = Math.floor(Math.random() * 3);
-  return compChoice[nb];
+ let compChoice = ["rock", "paper", "scissors"];
+ let nb = Math.floor(Math.random() * 3);
+ return compChoice[nb];
 };
+
 const playRound = (playerSelection, computerSelection) => {
-  playerSelection = playerSelection.toLowerCase();
-  if (playerSelection === "") {
-    return "Input a valid answer";
-  }
-  if (
-    (playerSelection === "rock" && computerSelection === "scissors") ||
-    (playerSelection === "paper" && computerSelection === "rock") ||
-    (playerSelection === "scissors" && computerSelection === "paper")
-  ) {
-    console.log(getComputerChoice());
-    return `You win ! ${playerSelection} beats ${computerSelection}`;
-  } else if (playerSelection === computerSelection) {
-    return "That's a tie";
-  } else {
-    return `You lose ! ${computerSelection} beats ${playerSelection}`;
-  }
+ 
+ if(parseInt(yourScore.innerHTML) === 5 ){
+   winner.innerHTML = `You won !`
+ } else if(parseInt(computerScore.innerHTML) === 5){
+   winner.innerHTML = `You Lost ! Computer has won !`
+   
+ }
+
+ if (playerSelection === computerSelection)
+ { 
+   return "That's a tie";
+ } else if (
+   (playerSelection === "rock" && computerSelection === "scissors") ||
+   (playerSelection === "paper" && computerSelection === "rock") ||
+   (playerSelection === "scissors" && computerSelection === "paper")
+ )  { 
+     parseInt(yourScore.innerHTML ++);
+     return `You win ! ${playerSelection} beats ${computerSelection}`;
+
+ } else {
+     parseInt(computerScore.innerHTML ++);
+     return `You lose ! ${computerSelection} beats ${playerSelection}`;
+ }
+ 
 };
-//declare game function to run a number of times
-const computerSelection = getComputerChoice();
-const game = () => {
-  for (let i = 0; i < 5; i++) {
-    console.log(playRound(playerSelection, computerSelection));
-  }
-  return 0;
-};
+//
 
-console.log(game());
+//event handler
 
-playBtn.addEventListener("click", playRound());
-
+const handleClick = (playerSelection) => {
+ const computerSelection = getComputerChoice();
+ console.log(playRound(playerSelection, computerSelection));
 }
+
+rock.addEventListener("click", function(){
+ handleClick("rock")
+});
+
+paper.addEventListener("click", function(){
+ handleClick("paper")
+});
+
+scissors.addEventListener("click", function(){
+ handleClick("scissors")
+});
+
