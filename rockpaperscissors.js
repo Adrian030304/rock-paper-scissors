@@ -43,7 +43,9 @@ const getRoundResults = (userOption) => {
 
 };
 
-
+const showResults = (userOption) => {
+  
+}
 
 //event handler
 
