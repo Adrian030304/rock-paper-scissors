@@ -69,20 +69,16 @@ const resetGame = () => {
 }
 
 //event handler
-
-const handleClick = (playerSelection) => {
-  const computerSelection = getComputerChoice();
-  console.log(playRound(playerSelection, computerSelection));
-};
-
-rock.addEventListener("click", function () {
-  handleClick("rock");
+rockBtn.addEventListener("click", function () {
+  showResults("Rock");
 });
 
-paper.addEventListener("click", function () {
-  handleClick("paper");
+paperBtn.addEventListener("click", function () {
+  showResults("Paper");
 });
 
-scissors.addEventListener("click", function () {
-  handleClick("scissors");
+scissorsBtn.addEventListener("click", function () {
+  showResults("Scissors");
 });
+
+resetGameBtn.addEventListener("click", resetGame);
