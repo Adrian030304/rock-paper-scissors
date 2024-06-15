@@ -69,3 +69,11 @@ h1{
     padding: 20px;
     user-select: none;
 }
+
+#resetBtn{
+    background-color: hsl(0, 69%, 31%);
+    color: white;
+    padding:20px;
+    border:none;
+    border-radius:20px;
+}

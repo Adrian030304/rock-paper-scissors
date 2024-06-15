@@ -24,8 +24,10 @@ const resetGame = () =>{
 const playRound = (playerSelection, computerSelection) => {
   if (parseInt(yourScoreSpan.innerHTML) === 5) {
     winner.innerHTML = `You won !`;
+    
   } else if (parseInt(computerScoreSpan.innerHTML) === 5) {
     winner.innerHTML = `You Lost ! Computer has won !`;
+    
   }
 
   if (playerSelection === computerSelection) {
