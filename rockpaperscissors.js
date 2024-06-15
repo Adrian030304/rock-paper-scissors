@@ -11,9 +11,9 @@ computerScore.innerHTML = 0
  
  //Functon declaration
 const getComputerChoice = () => {
- let compChoice = ["rock", "paper", "scissors"];
- let nb = Math.floor(Math.random() * 3);
- return compChoice[nb];
+ let options = ["rock", "paper", "scissors"];
+ let randomIndex = Math.floor(Math.random() * 3);
+ return options[randomIndex];
 };
 
 const playRound = (playerSelection, computerSelection) => {
