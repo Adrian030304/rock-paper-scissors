@@ -15,7 +15,7 @@ computerScoreSpanElement.innerHTML = 0;
 let playerScore = 0;
 let computerScore = 0;
 //Functon declaration
-const getComputerChoice = () => {
+const getRandomComputerResult = () => {
   let options = ["rock", "paper", "scissors"];
   let randomIndex = Math.floor(Math.random() * 3);
   return options[randomIndex];
@@ -29,7 +29,11 @@ const hasPlayerWonTheRound = (player, computer) => {
   );
 };
 //
+const getRoundResults = (userOption) => {
+  const computerResult = getRandomComputerResult();
 
+
+};
 
 //event handler
 
