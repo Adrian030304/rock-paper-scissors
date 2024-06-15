@@ -28,15 +28,18 @@ body{
     .options-container{
         display: flex;
         flex-direction: column;
-        margin-top: 20%;
+        margin-top: 40%;
         height: 50%;
     }
 }
-.options-container{
-    display: flex;
-    flex-direction: row;
-    gap: 20px;
+@media only screen and (min-width: 768px) {
+    .options-container{
+        display: flex;
+        flex-direction: row;
+        gap: 20px;
+    }
 }
+
 .container{
     
     height: 300px;
@@ -52,7 +55,7 @@ body{
     height:fit-content;
     background-color: #d8e06d;
     box-shadow: 0 0 1px;
-    font-size: 2rem;
+    font-size: 1.5rem;
     
 }
 .score{
@@ -84,7 +87,7 @@ body{
 .rock:active,
 .paper:active,
 .scissors:active{
-    padding: 60px 60px;
+    padding: 40px 40px;
 }
 
 h1{
