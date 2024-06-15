@@ -33,7 +33,13 @@ body{
         height: 50%;
     }
 }
+.options-container{
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+}
 .container{
+    
     height: 300px;
     width: 280px;
 
@@ -42,7 +48,7 @@ body{
 .result{
     position: fixed;
     top: 50px;
-    padding: 1.5%;
+    padding: 0.5%;
     border-radius: 15px;
     height:fit-content;
     background-color: #d8e06d;
@@ -62,7 +68,7 @@ body{
     height:fit-content;
     background-color: #d8e06d;
     border-radius: 15px;
-    padding: 40px 20px;
+    padding: 30px 20px;
     box-shadow: 0 0 1px;
     
     
@@ -79,7 +85,7 @@ body{
 .rock:active,
 .paper:active,
 .scissors:active{
-    padding: 80px 60px;
+    padding: 60px 60px;
 }
 
 h1{
