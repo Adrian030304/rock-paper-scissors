@@ -31,7 +31,7 @@ const playRound = (playerSelection, computerSelection) => {
   }
 
   if (playerSelection === computerSelection) {
-    winner.innerHTML =  "That's a tie";
+    winner.innerHTML =  `${playerSelection === computerSelection?"That's a tie":""}`;
   } else if (
     (playerSelection === "rock" && computerSelection === "scissors") ||
     (playerSelection === "paper" && computerSelection === "rock") ||
@@ -42,6 +42,7 @@ const playRound = (playerSelection, computerSelection) => {
   } else {
     parseInt(computerScoreSpan.innerHTML++);
     return `You lose ! ${computerSelection} beats ${playerSelection}`;
+    
   }
 };
 //
