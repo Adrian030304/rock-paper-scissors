@@ -7,9 +7,13 @@ let computerScoreSpanElement = document.querySelector(".computerScoreSpan");
 let roundResultsMsg = document.querySelector(".winner");
 let resetGameBtn = document.querySelector("#resetBtn");
 let optionsContainer = document.querySelector(".options-container");
-yourScoreSpan.innerHTML = 0;
-computerScoreSpan.innerHTML = 0;
 
+
+playerScoreSpanElement.innerHTML = 0;
+computerScoreSpanElement.innerHTML = 0;
+
+let playerScore = 0;
+let computerScore = 0;
 //Functon declaration
 const getComputerChoice = () => {
   let options = ["rock", "paper", "scissors"];
