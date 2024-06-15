@@ -28,7 +28,6 @@ body{
     .options-container{
         display: flex;
         flex-direction: column;
-        align-items: ;
         margin-top: 20%;
         height: 50%;
     }
