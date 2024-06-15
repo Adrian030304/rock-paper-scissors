@@ -1,11 +1,12 @@
 //Variable declaration
-let rock = document.querySelector(".rock");
-let paper = document.querySelector(".paper");
-let scissors = document.querySelector(".scissors");
-let yourScoreSpan = document.querySelector(".yourScoreSpan");
-let computerScoreSpan = document.querySelector(".computerScoreSpan");
-let winner = document.querySelector(".winner");
-let reset = document.querySelector("#resetBtn")
+let rockBtn = document.querySelector(".rock");
+let paperBtn = document.querySelector(".paper");
+let scissorsBtn = document.querySelector(".scissors");
+let playerScoreSpanElement = document.querySelector(".yourScoreSpan");
+let computerScoreSpanElement = document.querySelector(".computerScoreSpan");
+let roundResultsMsg = document.querySelector(".winner");
+let resetGameBtn = document.querySelector("#resetBtn");
+let optionsContainer = document.querySelector(".options-container");
 yourScoreSpan.innerHTML = 0;
 computerScoreSpan.innerHTML = 0;
 
@@ -19,7 +20,6 @@ const resetGame = () =>{
   yourScoreSpan.innerHTML = 0;
   computerScoreSpan.innerHTML = 0;
   winner.innerHTML = ""
-    
 }
 const playRound = (playerSelection, computerSelection) => {
   if (parseInt(yourScoreSpan.innerHTML) === 5) {
