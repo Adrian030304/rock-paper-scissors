@@ -26,7 +26,7 @@ const playRound = (playerSelection, computerSelection) => {
   }
 
   if (playerSelection === computerSelection) {
-    return "That's a tie";
+    winner.innerHTML =  "That's a tie";
   } else if (
     (playerSelection === "rock" && computerSelection === "scissors") ||
     (playerSelection === "paper" && computerSelection === "rock") ||
