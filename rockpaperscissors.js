@@ -31,7 +31,9 @@ const hasPlayerWonTheRound = (player, computer) => {
 //
 const getRoundResults = (userOption) => {
   const computerResult = getRandomComputerResult();
-
+  if(hasPlayerWonTheRound(userOption,computerResult)) {
+    playerScore++
+  }
 
 };
 
