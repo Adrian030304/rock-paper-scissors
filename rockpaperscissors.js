@@ -5,11 +5,9 @@ let scissors = document.querySelector(".scissors");
 let yourScoreSpan = document.querySelector(".yourScoreSpan");
 let computerScoreSpan = document.querySelector(".computerScoreSpan");
 let winner = document.querySelector(".winner");
+let reset = document.querySelector("#resetBtn")
 yourScoreSpan.innerHTML = 0;
 computerScoreSpan.innerHTML = 0;
-
-let playerScore = 0;
-let computerScore = 0;
 
 //Functon declaration
 const getComputerChoice = () => {
@@ -17,7 +15,12 @@ const getComputerChoice = () => {
   let randomIndex = Math.floor(Math.random() * 3);
   return options[randomIndex];
 };
-
+const resetGame = () =>{
+  yourScoreSpan.innerHTML = 0;
+  computerScoreSpan.innerHTML = 0;
+  winner.innerHTML = ""
+    
+}
 const playRound = (playerSelection, computerSelection) => {
   if (parseInt(yourScoreSpan.innerHTML) === 5) {
     winner.innerHTML = `You won !`;
@@ -40,6 +43,7 @@ const playRound = (playerSelection, computerSelection) => {
   }
 };
 //
+
 
 //event handler
 
