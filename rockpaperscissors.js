@@ -21,7 +21,13 @@ const getComputerChoice = () => {
   return options[randomIndex];
 };
 
-
+const hasPlayerWonTheRound = (player, computer) => {
+  return (
+    (player === "Rock" && computer === "Scissors") ||
+    (player === "Scissors" && computer === "Paper") ||
+    (player === "Paper" && computer === "Rock")
+  );
+};
 //
 
 
