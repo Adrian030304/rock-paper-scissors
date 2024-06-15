@@ -20,36 +20,8 @@ const getComputerChoice = () => {
   let randomIndex = Math.floor(Math.random() * 3);
   return options[randomIndex];
 };
-const resetGame = () =>{
-  yourScoreSpan.innerHTML = 0;
-  computerScoreSpan.innerHTML = 0;
-  winner.innerHTML = ""
-}
-const playRound = (playerSelection, computerSelection) => {
-  if (parseInt(yourScoreSpan.innerHTML) === 5) {
-    winner.innerHTML = `You won !`;
-    
-  } else if (parseInt(computerScoreSpan.innerHTML) === 5) {
-    winner.innerHTML = `You Lost ! Computer has won !`;
-    
-  }
 
-  if (playerSelection === computerSelection) {
-    winner.innerHTML =  "That's a tie";
-  } else if (
-    (playerSelection === "rock" && computerSelection === "scissors") ||
-    (playerSelection === "paper" && computerSelection === "rock") ||
-    (playerSelection === "scissors" && computerSelection === "paper")
-  ) {
-    parseInt(yourScoreSpan.innerHTML++);
-    return `You win ! ${playerSelection} beats ${computerSelection}`;
-  } else {
-    parseInt(computerScoreSpan.innerHTML++);
-    return `You lose ! ${computerSelection} beats ${playerSelection}`;
-    
-  }
-  winner.innerHTML = ""
-};
+
 //
 
 
