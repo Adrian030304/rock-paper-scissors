@@ -1,4 +1,4 @@
-//Variable declaration
+// Variable declaration
 let rockBtn = document.querySelector(".rock");
 let paperBtn = document.querySelector(".paper");
 let scissorsBtn = document.querySelector(".scissors");
@@ -8,16 +8,16 @@ let roundResultsMsg = document.querySelector(".winner");
 let resetGameBtn = document.querySelector("#resetBtn");
 let optionsContainer = document.querySelector(".options-container");
 
-
 playerScoreSpanElement.innerHTML = 0;
 computerScoreSpanElement.innerHTML = 0;
 
 let playerScore = 0;
 let computerScore = 0;
-//Functon declaration
+
+// Function declaration
 const getRandomComputerResult = () => {
-  let options = ["rock", "paper", "scissors"];
-  let randomIndex = Math.floor(Math.random() * 3);
+  const options = ["Rock", "Paper", "Scissors"];
+  const randomIndex = Math.floor(Math.random() * options.length);
   return options[randomIndex];
 };
 
@@ -28,11 +28,12 @@ const hasPlayerWonTheRound = (player, computer) => {
     (player === "Paper" && computer === "Rock")
   );
 };
-//
+
 const getRoundResults = (userOption) => {
   const computerResult = getRandomComputerResult();
-  if(hasPlayerWonTheRound(userOption,computerResult)) {
-    playerScore++
+
+  if (hasPlayerWonTheRound(userOption, computerResult)) {
+    playerScore++;
     return `Player wins! ${userOption} beats ${computerResult}`;
   } else if (computerResult === userOption) {
     return `It's a tie! Both chose ${userOption}`;
@@ -40,7 +41,6 @@ const getRoundResults = (userOption) => {
     computerScore++;
     return `Computer wins! ${computerResult} beats ${userOption}`;
   }
-
 };
 
 const showResults = (userOption) => {
@@ -65,10 +65,10 @@ const resetGame = () => {
   computerScoreSpanElement.innerText = computerScore;
   roundResultsMsg.innerText = "";
   resetGameBtn.style.display = "none";
-  optionsContainer.style.display = "flex";
-}
+  optionsContainer.style.display = "flex"; // or "block" depending on your CSS
+};
 
-//event handler
+// Event handlers
 rockBtn.addEventListener("click", function () {
   showResults("Rock");
 });
