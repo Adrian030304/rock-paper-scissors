@@ -16,6 +16,12 @@ body{
     font-family: 'Courier New', Courier, monospace;
     
 }
+@media only screen and (max-width: 600px){
+    body{
+        display: flex;
+        flex-direction: column;
+    }
+}
 .container{
     height: 300px;
     width: 280px;
@@ -45,7 +51,7 @@ body{
     height:fit-content;
     background-color: #d8e06d;
     border-radius: 15px;
-    padding: 50px 40px;
+    padding: 40px 20px;
     box-shadow: 0 0 1px;
     
     

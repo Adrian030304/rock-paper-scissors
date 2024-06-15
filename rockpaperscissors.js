@@ -65,7 +65,7 @@ const resetGame = () => {
   computerScoreSpanElement.innerText = computerScore;
   roundResultsMsg.innerText = "";
   resetGameBtn.style.display = "none";
-  optionsContainer.style.display = "flex"; // or "block" depending on your CSS
+  optionsContainer.style.display = "flex";
 };
 
 // Event handlers
