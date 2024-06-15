@@ -12,7 +12,8 @@ body{
     flex-direction: row;
     text-align: center;
     gap: 20px;
-    
+    background-color: #22c55e;
+    font-family: 'Courier New', Courier, monospace;
     
 }
 .container{
@@ -29,11 +30,13 @@ body{
     height:fit-content;
     background-color: #d8e06d;
     box-shadow: 0 0 1px;
+    font-size: 2rem;
     
 }
 .score{
     display: flex;
     justify-content: center;
+
 }
 .rock,
 .paper,
@@ -44,6 +47,7 @@ body{
     border-radius: 15px;
     padding: 50px 40px;
     box-shadow: 0 0 1px;
+    
     
     
 }
