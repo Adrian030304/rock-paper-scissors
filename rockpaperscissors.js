@@ -56,6 +56,16 @@ const showResults = (userOption) => {
     resetGameBtn.style.display = "block";
     optionsContainer.style.display = "none";
   }
+};
+
+const resetGame = () => {
+  playerScore = 0;
+  computerScore = 0;
+  playerScoreSpanElement.innerText = playerScore;
+  computerScoreSpanElement.innerText = computerScore;
+  roundResultsMsg.innerText = "";
+  resetGameBtn.style.display = "none";
+  optionsContainer.style.display = "flex";
 }
 
 //event handler
