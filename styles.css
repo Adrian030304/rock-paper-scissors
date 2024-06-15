@@ -17,9 +17,20 @@ body{
     
 }
 @media only screen and (max-width: 600px){
-    body{
+    .container{
+        padding: 2px;
+    }
+    .result{
+        margin-bottom: 10%;
+        width: 90%;
+        overflow: hidden;
+    }
+    .options-container{
         display: flex;
         flex-direction: column;
+        align-items: ;
+        margin-top: 20%;
+        height: 50%;
     }
 }
 .container{
